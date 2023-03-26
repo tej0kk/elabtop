@@ -1,0 +1,209 @@
+@media (max-width: 992px) {
+    #HeaderComp .btn-keranjang{
+        background-color: #ff0000;
+        color: #ffffff;
+        width: 138px;
+        height: 35px;
+    }
+    
+    #HeaderComp .nav-link:hover{
+        color: black;
+    }
+    
+    #HeaderComp .logo-elabtop{
+        height: 60px;
+        width: 100%;
+        object-fit: contain;                                     
+    }
+
+    #BannerComp {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    #BannerComp .img-banner{
+        height: 350px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    #BannerComp .btn-buy-now{
+        background-color: #ff0000;
+        color: #ffffff;
+    }
+    
+    #LogoComp .img-brand{
+        height: 50px;
+        width: 100%;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    #LogoComp {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #LandingPage .promo1{
+        height: 200px;
+        width: 100%;
+        object-fit: contain;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    
+    #ProductComp .img-product{
+        height:100px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    #ProductComp .btn-buy-product{
+        background-color: #ff0000;
+        color: #ffffff;
+        width:100%; 
+    }
+
+    #ProductComp .card{
+        margin-bottom: 30px;
+    }
+    
+    #AccessoriesComp .img-accessories{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    #FooterComp .text-custom {
+        font-size: 14px;
+    }
+
+    #FooterComp .img-logo-brand{
+        height: 40px;
+        object-fit: contain;  
+    }
+    
+    #FooterComp .socmed-icon{
+    height: 20px;           
+    object-fit: contain;
+    margin-right: 10px;
+    }
+    
+    /* End */
+    
+    /* Katalog Page */
+    #KatalogPage .promo2{
+        height:100px;
+        width:100%;
+        object-fit: contain;
+    }
+    /* End */
+    
+    /* Product Detail Page */
+    #ProductDetailComp .main-btn{
+        background-color: #ff0000;
+        color: #ffffff;
+    }
+    
+    #ProductDetailComp .total-item{
+        width: 50px;
+        border-color: #ff0000;
+    }
+    
+    #ProductDetailComp .caraousel-img{
+        height: 367px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    /* End */
+    
+    /* Keranjang Page */
+
+    #TableComp .text-cuxtom{
+        font-size: 12px;
+    }
+    #KeranjangPage .img-table{
+        height:134px;
+        width:100%;
+        object-fit: contain;
+    }
+    
+    #KeranjangPage .btn-hapus{
+        background-color: #FF3D47;
+        color: #ffffff;
+    }
+    
+    #KeranjangPage .btn-checkout-keranjang{
+        background-color: #16FF73;
+        color: #ffffff;
+    }
+    /* End */
+    
+    /* Checkout Page */
+    #CheckoutComp .text-custom {
+        font-size: 14px;
+    }
+
+    #CheckoutComp .mandiri-icon{
+        height: 80px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    #CheckoutComp .total-item{
+        width: 50px;
+        border-color: #ff0000;
+    }
+    
+    #CheckoutComp .img-checkout{
+        height:222px;
+        width:100%;
+        object-fit:contain;
+    }
+    
+    /* End */
+    
+    /* Konfirmasi Page */
+    
+    #KonfirmasiComp .img-konfirmasi{
+        width: 100%;
+        height: 350px;
+        object-fit: contain;
+    }
+    
+    #RingkasanBelanjaComp .text-custom {
+        font-size: 12px;
+    }
+    #RingkasanBelanjaComp .btn-byr-sekarang{
+        font-weight:600; 
+        background-color: #16FF73;
+        color: #ffffff;
+    }
+    
+    #RingkasanBelanjaComp .btn-btl-konfirmasi{
+        color: #ff0000;
+        font-weight: 600;
+    }
+    /* End */
+    
+    /* Sukses Page */
+    #SuksesComp .mandiri-icon{
+        height: 42px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    #SuksesComp .img-sukses{
+        height: 300px;
+        width: 100%;
+        object-fit: contain;
+        margin-top: 30px;
+    }
+    
+    #SuksesComp .btn-kembali{
+        background-color: #ff0000;
+        color: #ffffff;
+    }
+    /* End */
+}

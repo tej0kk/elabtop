@@ -1,0 +1,175 @@
+@media (min-width: 992px) {
+    #HeaderComp .btn-keranjang{
+        background-color: #ff0000;
+        color: #ffffff;
+        width: 138px;
+        height: 35px;
+    }
+    
+    #HeaderComp .nav-link:hover{
+        color: black;
+    }
+    
+    #HeaderComp .logo-elabtop{
+        height: 60px;
+        width: 100%;
+        object-fit: contain;                                     
+    }
+    
+    #BannerComp .img-banner{
+        height: 514px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    #BannerComp .btn-buy-now{
+        background-color: #ff0000;
+        color: #ffffff;
+    }
+    
+    #LogoComp .img-brand{
+        height: 74px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    #LandingPage .promo1{
+        height: 423px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    #ProductComp .img-product{
+        height:226px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    #ProductComp .btn-buy-product{
+        background-color: #ff0000;
+        color: #ffffff;
+        width:100%; 
+    }
+    
+    #AccessoriesComp .img-accessories{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    #FooterComp .img-logo-brand{
+        height: 60px;
+        object-fit: contain;  
+    }
+    
+    #FooterComp .socmed-icon{
+        height: 35px;
+        object-fit: contain;
+        margin-right: 20px;
+    }
+    
+    /* End */
+    
+    /* Katalog Page */
+    #KatalogPage .promo2{
+        height:423px;
+        width:100%;
+        object-fit: contain;
+    }
+    /* End */
+    
+    /* Product Detail Page */
+    #ProductDetailComp .main-btn{
+        background-color: #ff0000;
+        color: #ffffff;
+    }
+    
+    #ProductDetailComp .total-item{
+        width: 50px;
+        border-color: #ff0000;
+    }
+    
+    #ProductDetailComp .caraousel-img{
+        height: 367px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    /* End */
+    
+    /* Keranjang Page */
+    #KeranjangPage .img-table{
+        height:134px;
+        width:100%;
+        object-fit: contain;
+    }
+    
+    #KeranjangPage .btn-hapus{
+        background-color: #FF3D47;
+        color: #ffffff;
+    }
+    
+    #KeranjangPage .btn-checkout-keranjang{
+        background-color: #16FF73;
+        color: #ffffff;
+    }
+    /* End */
+    
+    /* Checkout Page */
+    #CheckoutComp .total-item{
+        width: 50px;
+        border-color: #ff0000;
+    }
+    
+    #CheckoutComp .img-checkout{
+        height:222px;
+        width:100%;
+        object-fit:contain;
+    }
+
+    #CheckoutComp .mandiri-icon{
+        height: 80px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    /* End */
+    
+    /* Konfirmasi Page */
+    #KonfirmasiComp .img-konfirmasi{
+        width: 100%;
+        height: 350px;
+        object-fit: contain;
+    }
+    
+    #RingkasanBelanjaComp .btn-byr-sekarang{
+        font-weight:600; 
+        background-color: #16FF73;
+        color: #ffffff;
+    }
+    
+    #RingkasanBelanjaComp .btn-btl-konfirmasi{
+        color: #ff0000;
+        font-weight: 600;
+    }
+    /* End */
+    
+    /* Sukses Page */
+    #SuksesComp .mandiri-icon{
+        height: 42px;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    #SuksesComp .img-sukses{
+        height: 632px;
+        width: auto;
+        object-fit: contain;
+    }
+    
+    #SuksesComp .btn-kembali{
+        background-color: #ff0000;
+        color: #ffffff;
+    }
+    /* End */
+}
