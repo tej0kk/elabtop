@@ -8,7 +8,7 @@
                 </router-link>
             </div>
         </div>
-        <ProductDetailComp/>
+        <ProductDetailComp :detailProduk="detailProduk"/>
         <ProductComp :produk="produk"/>
         <FooterComp/>
     </div>
@@ -33,7 +33,7 @@ export default{
     data(){
         return{
             produk: [],
-            detailProduk:[],
+            detailProduk:{},
         }
     },
     methods:{
@@ -51,10 +51,10 @@ export default{
         },
         getProdukDet()
         {
-            axios.get("http://127.0.0.1:8000/api/produk?q=4")
+            axios.get("http://127.0.0.1:8000/api/produk?q=" + this.$route.params.id)
                 .then((response) => {
                     this.detailProduk = response.data.data;
-                    console.log(this.detailProduk);//debug
+                    // console.log(this.detailProduk);//debug
                 })
                 .catch((error) => {
                     alert('Mohon Periksa Koneksi Anda !' + error);
@@ -64,9 +64,13 @@ export default{
     },
     mounted()
     {
-        this.getProdukRec();
         this.getProdukDet();
-    }
+        this.getProdukRec();
+    },
+    // updated()
+    // {
+    //     this.getProdukDet();
+    // }
 };
 </script>
 

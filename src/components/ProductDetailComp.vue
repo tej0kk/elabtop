@@ -15,16 +15,7 @@
                         <!-- The slideshow/carousel -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../assets/t480s.png" alt="Lenovo T480S" class="d-block caraousel-img" style="width:100%">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../assets/t490s.png" alt="Lenovo T490S" class="d-block caraousel-img" style="width:100%">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../assets/legion.png" alt="Lenovo Legion" class="d-block caraousel-img" style="width:100%">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../assets/rogstrix.png" alt="Lenovo Rogstrix" class="d-block caraousel-img" style="width:100%">
+                                <img :src="'http://127.0.0.1:8000/assets/images/produk/' + detailProduk.foto" alt="Lenovo T480S" class="d-block caraousel-img" style="width:100%">
                             </div>
                         </div>
 
@@ -38,37 +29,31 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-12 mt-4">
-                    <h2 style="font-weight:600;">Lenovo Thinkpad T480S</h2>
-                    <p>Harga:<span style="color:#ff0000;"> 21.000.000</span></p>
+                    <h2 style="font-weight:600;">{{ detailProduk.nama }}</h2>
+                    <p>Harga:<span style="color:#ff0000;">Rp {{ detailProduk.harga }}</span></p>
                     <div class="border rounded-3 px-3 pt-3">
                         <h6 class="mb-2">Spesifikasi</h6>
                         <p>
-                            Processor Up to 8th Gen Intel® Core™ i5/i7 vPro™ <br>
-                            Operating System Windows 10 Pro<br>
-                            14" Antiglare Display FHD IPS (1920 x 1080, 250 nit)<br>
-                            FHD IPS touchscreen (1920 x 1080, 300 nit)<br>
-                            FHD IPS low power (1920 x 1080, 400 nit)<br>
-                            FHD IPS Privacy Guard (1920 x 1080, 400 nit)<br>
-                            Memory Up to 32GB<br>
-                            Battery Up to 20 hours* 57Wh,<br>
-                            Rapid Charge technology available with 65W AC<br>
+                            {{ detailProduk.spesifikasi }}
                         </p>
                     </div>
-                    <div class="row my-3">
-                        <div class="col-lg-3 col-2">
-                            <input class="text-center total-item" type="number" value="1" min="0" max="9">
+                        <div class="row my-3">
+                            <div class="col-lg-3 col-2">
+                                <button class="btn main-btn" v-on:click=kurang()> - </button>
+                                <span class="text-center total-item mx-2">{{banyak}}</span>
+                                <button class="btn main-btn" v-on:click=tambah()> + </button>
+                            </div>
+                            <div class="col-lg-9 col-10 text-end">
+                                <button  v-on:click="postKeranjang()" class="btn btn-sm" style="border-color:#ff0000; color: #ff0000;">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                    Keranjang
+                                </button>
+                                <router-link to="/checkoutpage" class="btn btn-sm ms-2 main-btn">
+                                    Pesan Sekarang
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                </router-link>
+                            </div>
                         </div>
-                        <div class="col-lg-9 col-10 text-end">
-                            <router-link to="/keranjangpage" class="btn btn-sm" style="border-color:#ff0000; color: #ff0000;">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                                Keranjang
-                            </router-link>
-                            <router-link to="/checkoutpage" class="btn btn-sm ms-2 main-btn">
-                                Pesan Sekarang
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </router-link>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -76,7 +61,45 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     name: "ProductDetailComp",
+    props: ["detailProduk"],
+    data() {
+        return{
+            banyak: 0,
+            keranjang: {},
+        }
+    },
+    methods: {
+        tambah() {
+            this.banyak += 1;
+            if (this.banyak > this.detailProduk.stok) {
+                this.banyak = this.detailProduk.stok;
+            }
+        },
+        kurang() {
+            this.banyak -= 1;
+            if (this.banyak < 1)
+            {
+                this.banyak = 1;
+            }
+        },
+        postKeranjang()
+        {
+            this.keranjang.produk_id = this.detailProduk.id;
+            this.keranjang.banyak = this.banyak;
+            console.log(this.keranjang);
+            axios.post("http://127.0.0.1:8000/api/keranjang", this.keranjang)
+                .then((response) => {
+                    alert(response.data.message);
+                    // console.log(response.data.message);//debug
+                })
+                .catch((error) => {
+                    alert('Mohon Periksa Koneksi Anda !' + error);
+                    // console.log(error);//debug
+                })
+        }
+    }
 };
 </script>

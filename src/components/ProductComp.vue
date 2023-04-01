@@ -3,7 +3,7 @@
         <div class="container mt-5">
             <div class="row ">
                 <div class="col-lg-6 col-6">
-                    <h6 class="text-start" style="font-weight: 600;">Rekomendasi Untukmu</h6>
+                    <h6 class="text-start" style="font-weight: 600;">{{ title }}</h6>
                 </div>
                 <div class="col-lg-6 col-6">
                     <router-link to="/katalogpage" style="text-decoration: none;">
@@ -19,7 +19,7 @@
                         <div class="card-body text-center">
                             <h6 class="card-title" style="font-weight: 600;">{{ item.nama }}</h6>
                             <p class="card-text" style="color:#b0b0b0;">Rp {{ item.harga }}</p>
-                            <router-link to="/productdetailpage" class="btn btn-sm btn-buy-product">Beli Sekarang
+                            <router-link :to="'/productdetailpage/'+ item.id" class="btn btn-sm btn-buy-product">Beli Sekarang
                                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </router-link>
                         </div>
@@ -33,6 +33,6 @@
 <script>
 export default {
     name: "ProductComp",
-    props: ["produk"],
+    props: ["produk", "title"],
 };
 </script>

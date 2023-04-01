@@ -19,7 +19,7 @@
                         </li>
 
                     </ul>
-                    <router-link to="/katalogpage" class="btn btn-sm btn-keranjang">
+                    <router-link to="/keranjangpage" class="btn btn-sm btn-keranjang">
                         <i class="fa fa-cart-plus" aria-hidden="true"></i> Keranjang
                     </router-link>
                 </div>
