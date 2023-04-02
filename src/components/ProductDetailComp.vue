@@ -62,12 +62,13 @@
 
 <script>
 import axios from 'axios';
+
 export default {
     name: "ProductDetailComp",
     props: ["detailProduk"],
     data() {
         return{
-            banyak: 0,
+            banyak: 1,
             keranjang: {},
         }
     },
@@ -92,14 +93,24 @@ export default {
             console.log(this.keranjang);
             axios.post("http://127.0.0.1:8000/api/keranjang", this.keranjang)
                 .then((response) => {
-                    alert(response.data.message);
+                    // alert(response.data.message);
                     // console.log(response.data.message);//debug
+                    this.$toast.success(response.data.message, {
+                        type: "success",
+                        position: "top",
+                        duration: 2000,
+                    });
                 })
                 .catch((error) => {
-                    alert('Mohon Periksa Koneksi Anda !' + error);
+                    // alert('Mohon Periksa Koneksi Anda !' + error);
+                    this.$toast.error(error, {
+                        type: "error",
+                        position: "top",
+                        duration: 2000,
+                    });
                     // console.log(error);//debug
                 })
         }
-    }
+    },
 };
 </script>
