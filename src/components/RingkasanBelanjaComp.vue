@@ -7,7 +7,7 @@
                     <p class="pe-5 text-custom">Total Harga (1 Barang)<span class="ps-5 ms-3">Rp. 21.000.000</span></p>
                     <p class="pe-5 text-custom">Total Ongkos Kirim<span class="ps-5 ms-5 ">Rp. 20.000</span></p>
                     <p class="me-5 text-custom mt-5" style="font-weight:600;">Total Tagihan<span class="ps-5 ms-4"
-                            style="color:#ff0000">Rp. 21.000.000</span></p>
+                            style="color:#ff0000">Rp. 21.000.000</span></p> 
                     <router-link to="/konfirmasipage" class="btn mt-3 me-5 btn-byr-sekarang text-custom">Bayar Sekarang
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </router-link>
