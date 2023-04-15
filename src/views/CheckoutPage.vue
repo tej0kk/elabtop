@@ -9,8 +9,8 @@
                 </router-link>
             </div>
         </div>
-        <CheckoutComp :keranjang="keranjang" />
-        <RingkasanBelanjaComp :keranjang="keranjang"/> 
+        <CheckoutComp :keranjang="keranjang" @ongkir="ongkirInfo($event)" />
+        <RingkasanBelanjaComp :keranjang="keranjang" :ongkos="ongkos"/> 
         <FooterComp />
     </div>
 </template>
@@ -34,6 +34,7 @@ export default {
     data() {
         return {
             "keranjang": [],
+            "ongkos": 0
         }
     },
     methods:{
@@ -51,6 +52,12 @@ export default {
                         duration: 2000,
                     });
                 })
+        },
+        ongkirInfo(biaya)
+        {   
+            this.ongkos = biaya;
+            // console.log(this.ongkos);
+            return this.ongkos;
         }
     },
     mounted() {
